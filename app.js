@@ -162,14 +162,29 @@ function loadData(){
 }
 
 function addCustomer(){
+    let txtName=document.getElementById('txtName');
     let txtAge=document.getElementById('txtAge');
+    let txtAddress=document.getElementById('txtAddress');
+    let txtSalary=document.getElementById('txtSalary');
+
+    let customerName=txtName.value;
     let customerAge=txtAge.value;
+    let customerAddress=txtAddress.value;
+    let customerSalary=txtSalary.value;
+
     if(customerAge>10){
         customerList.push({
+            name:customerName,
             age:customerAge,
+            address:customerAddress,
+            salary:customerSalary
         });
+        
         loadData();
+        console.log(customerName);
         console.log(customerAge);
+        console.log(customerAddress);
+        console.log(customerSalary);
     }else{
         alert("Invalid age ");
     }
